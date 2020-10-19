@@ -1,0 +1,7 @@
+2020-10-19 10:10:26.104  INFO 15080 --- [main] com.project.sell.LogbackTest             : Starting LogbackTest on HB-LAPTOP with PID 15080 (started by HB in D:\StudyFile\ProjectWorkstation\sell)
+2020-10-19 10:10:26.108  INFO 15080 --- [main] com.project.sell.LogbackTest             : No active profile set, falling back to default profiles: default
+2020-10-19 10:10:27.803 ERROR 15080 --- [main] o.a.catalina.core.AprLifecycleListener   : An incompatible version [1.2.12] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2020-10-19 10:10:29.041  INFO 15080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-19 10:10:30.153  INFO 15080 --- [main] com.project.sell.LogbackTest             : Started LogbackTest in 4.801 seconds (JVM running for 6.754)
+2020-10-19 10:10:30.787  INFO 15080 --- [main] com.project.sell.LogbackTest             : HB use slf4j.
+2020-10-19 10:10:30.813  INFO 15080 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

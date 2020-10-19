@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+    <!-- 配置console展现形式 -->
+    <appender name="consoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>
+                %d - %msg%n
+            </pattern>
+        </layout>
+    </appender>
+
+    <!-- 配置info的格式输出 - 输出到文件中 -->
+    <appender name="fileInfoLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 过滤掉Error信息 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>DENY</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>
+                %d - %msg%n
+            </pattern>
+        </encoder>
+        <!-- 滚动策略: 每天生成一个info日志 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 路径 -->
+            <fileNamePattern>D:\DevelopmentEnvironment\apache-tomcat\apache-tomcat-8.0.44\logs\sell\info-%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 配置error的格式输出 - 输出到文件中 -->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 只输出Error信息, 过滤掉其他信息 -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>
+                %d - %msg%n
+            </pattern>
+        </encoder>
+        <!-- 滚动策略: 每天生成一个info日志 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 路径 -->
+            <fileNamePattern>D:\DevelopmentEnvironment\apache-tomcat\apache-tomcat-8.0.44\logs\sell\error-%d.log</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+
+    <!-- 配置项的作用范围和配置使用-->
+    <root level="info">
+        <appender-ref ref="consoleLog"/>
+        <appender-ref ref="fileInfoLog"/>
+        <appender-ref ref="fileErrorLog"/>
+    </root>
+
+</configuration>
