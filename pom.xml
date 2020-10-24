@@ -46,13 +46,23 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- Spring data jpa
-         实现对数据库的访问和操作 -->
+        <!-- Spring-data-jpa - 实现对数据库的访问和操作
+         SpringData JPA是spring基于ORM框架（hibernate）、JPA（Java Persistence API）
+          规范的基础上封装的一套JPA应用框架，可以使开发者使用极简的代码实现对数据库的访问和操作。
+          它提供了包括增删改查等在内的基本功能，且易于扩展。
+          -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+        <!-- 热加载依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>1.5.22.RELEASE</version>
+            <optional>true</optional>
+        </dependency>
 
     </dependencies>
 
