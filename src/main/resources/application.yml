@@ -8,11 +8,13 @@ spring:
 # 是否打印执行的SQL语句
   jpa:
     show-sql: true
+# jackson全局配置
+  jackson:
+    default-property-inclusion: non_null
 
 # 规定路由前缀
 server:
   context-path: /sell
-
 
 
 
